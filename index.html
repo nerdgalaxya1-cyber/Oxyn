@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oyxn Browser</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            background: #050505; 
+            height: 100vh; display: flex; align-items: center; justify-content: center;
+            font-family: 'Inter', sans-serif; color: white;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(20px);
+            padding: 40px; border-radius: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center; width: 90%; max-width: 450px;
+            box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+        }
+        /* Logo Oyxn */
+        h1 { 
+            font-size: 3rem; margin-bottom: 30px; font-weight: 800; 
+            letter-spacing: -2px; background: linear-gradient(to right, #00d1ff, #00ff87);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        }
+        
+        .search-container { margin-bottom: 35px; }
+        input[type="text"] {
+            width: 100%; padding: 18px 25px; border-radius: 20px;
+            border: none; background: #111; color: white; font-size: 1rem;
+            outline: none; transition: 0.4s; border: 1px solid #222;
+        }
+        input[type="text"]:focus {
+            border-color: #00d1ff;
+            box-shadow: 0 0 20px rgba(0, 209, 255, 0.3);
+        }
+
+        .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; }
+        .card {
+            background: #111; padding: 20px; border-radius: 22px;
+            text-decoration: none; color: white; font-weight: 500;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid #222; position: relative; overflow: hidden;
+        }
+        /* Efeito Neon no Hover */
+        .card:hover {
+            transform: scale(1.05);
+            border-color: #00ff87;
+            box-shadow: 0 0 30px rgba(0, 255, 135, 0.2);
+        }
+        .icon { font-size: 1.4rem; margin-bottom: 5px; display: block; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>oyxn</h1>
+
+        <form action="https://www.google.com/search" method="GET" class="search-container">
+            <input type="text" name="q" placeholder="Pesquisar..." autocomplete="off">
+        </form>
+
+        <div class="grid">
+            <a href="https://github.com" class="card">
+                <span class="icon">🐙</span> GitHub
+            </a>
+            <a href="https://youtube.com" class="card">
+                <span class="icon">▶️</span> YouTube
+            </a>
+            <a href="#" class="card">
+                <span class="icon">⚙️</span> Config
+            </a>
+            <a href="#" class="card">
+                <span class="icon">🌐</span> Meu Site
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
